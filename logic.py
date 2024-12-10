@@ -1,4 +1,5 @@
 import clips
+from clips.facts import TemplateFact
 
 
 def assert_template(env, tmpl_name, fields: dict):
@@ -14,15 +15,23 @@ def assert_answer(env, answer, question_text):
     return assert_template(env, 'answer', {'answer-given': answer, 'to-question': question_text})
 
 
+def get_question(env):
+    for fact in env.facts():
+        if fact.template.name == 'question':
+            return fact
+
+
 if __name__ == '__main__':
     environment = clips.Environment()
     environment.load(path="baza.clp")
     environment.reset()
 
     assert_template(environment, 'person', {'name': 'Test', 'surname': '22'})
-    print(assert_answer(environment, 'Yes', 'Ans 1'))
-
+    assert_answer(environment, 'Yes', 'Ans 1')
     # execute the activations in the agenda
+    q = get_question(environment)
+    print(q['text'])
     environment.run()
+
 
 
