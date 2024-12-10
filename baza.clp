@@ -2,6 +2,12 @@
   (slot name (type STRING))
   (slot surname (type STRING)))
 
+
+(deftemplate answer
+    (slot to-question (type STRING))
+    (slot answer-given (type STRING))
+)
+
 (deffacts baza
     (person (name "John") (surname "Doe"))
 )
