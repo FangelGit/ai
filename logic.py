@@ -32,11 +32,7 @@ if __name__ == '__main__':
     environment.load(path="baza.clp")
     environment.reset()
 
-    assert_template(environment, 'person', {'name': 'Test', 'surname': '22'})
-    assert_answer(environment, 'Yes', 'Ans 1')
     # execute the activations in the agenda
-    q = get_question(environment)
-    print(q['text'])
     environment.run()
 
 
