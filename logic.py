@@ -1,39 +1,39 @@
 import clips
 from clips.facts import TemplateFact
 
+class LogicClass:
+    ENV = clips.Environment()
 
-def assert_template(env, tmpl_name, fields: dict):
-    tmpl = env.find_template(tmpl_name)
-    return tmpl.assert_fact(**fields)
-
-
-def assert_question(env, question_text, answers):
-    return assert_template(env, 'question', {'text': question_text, 'valid-answers': answers})
+    def assert_template(self, tmpl_name, fields: dict):
+        tmpl = self.ENV.find_template(tmpl_name)
+        return tmpl.assert_fact(**fields)
 
 
-def assert_answer(env, answer, question_text):
-    return assert_template(env, 'answer', {'answer-given': answer, 'to-question': question_text})
+    def assert_question(self, question_text, answers):
+        return self.assert_template('question', {'text': question_text, 'valid-answers': answers})
 
 
-def get_question_fact(env):
-    for fact in env.facts():
-        if fact.template.name == 'question':
-            return fact
+    def assert_answer(self, answer, question_text):
+        return self.assert_template('answer', {'answer-given': answer, 'to-question': question_text})
 
 
-def get_result_fact(env):
-    for fact in env.facts():
-        if fact.template.name == 'result':
-            return fact
+    def get_question_fact(self):
+        for fact in self.ENV.facts():
+            if fact.template.name == 'question':
+                return fact
 
 
-if __name__ == '__main__':
-    environment = clips.Environment()
-    environment.load(path="baza.clp")
-    environment.reset()
+    def get_result_fact(self):
+        for fact in self.ENV.facts():
+            if fact.template.name == 'result':
+                return fact
+            
+    def restart(self):
+        self.ENV.reset()
+        # execute the activations in the agenda
+        self.ENV.run()
 
-    # execute the activations in the agenda
-    environment.run()
-
-
+    def __init__(self):
+        self.ENV.load(path="baza.clp")
+        self.restart()
 

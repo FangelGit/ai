@@ -132,8 +132,8 @@
 ?y <- (question (text "Do I want to become more confident?") (valid-answers "Yes" "No"))
 =>
 (retract ?y)
-(assert (question (text "Your lack of confidence is holding you back from reaching your dreams. Let's work on it! \n
-	Do I want more confidence in myself or with my photography?") (valid-answers "Myself" "My photography")))
+(assert (question (text "Your lack of confidence is holding you back from reaching your dreams. Let's work on it! 
+Do I want more confidence in myself or with my photography?") (valid-answers "Myself" "My photography")))
 )
 
 (defrule show-question-5-2
@@ -153,8 +153,12 @@
 )
 
 (defrule show-question-6-1
-(answer (answer-given "My photography") (to-question "Do I want more confidence in myself or with my photography?"))
-?y <- (question (text "Do I want more confidence in myself or with my photography?") (valid-answers "Myself" "My photography"))
+(or (answer (answer-given "My photography") (to-question "Do I want more confidence in myself or with my photography?"))
+(answer (answer-given "My photography") (to-question "Your lack of confidence is holding you back from reaching your dreams. Let's work on it! 
+Do I want more confidence in myself or with my photography?")))
+(or ?y <- (question (text "Do I want more confidence in myself or with my photography?") (valid-answers "Myself" "My photography"))
+?y <- (question (text "Your lack of confidence is holding you back from reaching your dreams. Let's work on it! 
+Do I want more confidence in myself or with my photography?") (valid-answers "Myself" "My photography")))
 =>
 (retract ?y)
 (assert (question (text "Am I more scared of photographing strangers or what others think of my photography?") 
@@ -292,8 +296,8 @@
 )
 
 (defrule show-question-9-1
-(answer (answer-given "Yes") (to-question "Continue?"))
-?y <- (question (text "Continue?") (valid-answers "Yes"))
+(answer (answer-given "Okay") (to-question "Ask strangers to make their portrait. Keep asking until you get 10 people to say 'yes'."))
+?y <- (question (text "Ask strangers to make their portrait. Keep asking until you get 10 people to say 'yes'.") (valid-answers "Okay"))
 =>
 (retract ?y)
 (assert (question (text "Ready to take it to the next step?") (valid-answers "Yes" "No")))
@@ -316,7 +320,10 @@
 ?y <- (question (text "Want to find inspiration from yourself?") (valid-answers "Yes" "No"))
 =>
 (retract ?y)
-(assert (result (text "Study the masters of photography: Josef Koudelka, Henri Cartier-Bresson, Richard Avedon.")))
+(assert (result (text "Study the masters of photography: 
+Josef Koudelka
+Henri Cartier-Bresson
+Richard Avedon")))
 (assert (end))
 )
 
@@ -377,8 +384,12 @@
 )
 
 (defrule show-result-9
-(answer (answer-given "Myself") (to-question "Do I want more confidence in myself or with my photography?"))
-?y <- (question (text "Do I want more confidence in myself or with my photography?") (valid-answers "Myself" "My photography"))
+(or (answer (answer-given "Myself") (to-question "Do I want more confidence in myself or with my photography?"))
+(answer (answer-given "Myself") (to-question "Your lack of confidence is holding you back from reaching your dreams. Let's work on it! 
+Do I want more confidence in myself or with my photography?")))
+(or ?y <- (question (text "Do I want more confidence in myself or with my photography?") (valid-answers "Myself" "My photography"))
+?y <- (question (text "Your lack of confidence is holding you back from reaching your dreams. Let's work on it! 
+Do I want more confidence in myself or with my photography?") (valid-answers "Myself" "My photography")))
 =>
 (retract ?y)
 (assert (result (text "Make a list of low risk things that scare you. Do one a day.")))
@@ -534,8 +545,7 @@
 ?y <- (question (text "Do I want to converse with the subjects?") (valid-answers "Yes" "No"))
 =>
 (retract ?y)
-(assert (result (text "Ask strangers to make their portrait. Keep asking until you get 10 people to say 'yes'.")))
-(assert (question (text "Continue?") (valid-answers "Yes")))
+(assert (question (text "Ask strangers to make their portrait. Keep asking until you get 10 people to say 'yes'.") (valid-answers "Okay")))
 )
 
 (defrule show-result-27
@@ -552,7 +562,10 @@
 ?y <- (question (text "Do I want to be closer or further from the subject(s)?") (valid-answers "Closer" "Further"))
 =>
 (retract ?y)
-(assert (result (text "The Video Technique: 1. Pretend to record a video. 2. Move closer to the subject. 3. Take your photo.")))
+(assert (result (text "The Video Technique: 
+1. Pretend to record a video. 
+2. Move closer to the subject. 
+3. Take your photo.")))
 (assert (end))
 )
 
@@ -561,7 +574,10 @@
 ?y <- (question (text "Do I want to be closer or further from the subject(s)?") (valid-answers "Closer" "Further"))
 =>
 (retract ?y)
-(assert (result (text "The Fishing Technique: 1. Choose your scene. 2. Wait for the subject to enter your frame. 3. Take your photo.")))
+(assert (result (text "The Fishing Technique: 
+1. Choose your scene. 
+2. Wait for the subject to enter your frame. 
+3. Take your photo.")))
 (assert (end))
 )
 
