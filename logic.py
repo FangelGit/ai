@@ -15,9 +15,15 @@ def assert_answer(env, answer, question_text):
     return assert_template(env, 'answer', {'answer-given': answer, 'to-question': question_text})
 
 
-def get_question(env):
+def get_question_fact(env):
     for fact in env.facts():
         if fact.template.name == 'question':
+            return fact
+
+
+def get_result_fact(env):
+    for fact in env.facts():
+        if fact.template.name == 'result':
             return fact
 
 
