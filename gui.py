@@ -48,6 +48,7 @@ def start_click():
     ENV.load("baza.clp")
     ENV.reset()
     print(root)
+    ENV.run()
     show_question_dialog()
 
 

@@ -128,7 +128,7 @@
 )
 
 (defrule show-message-and-question-5-1
-(answer (answer-given "No") (to-question "Do I want to become more confident?")))
+(answer (answer-given "No") (to-question "Do I want to become more confident?"))
 ?y <- (question (text "Do I want to become more confident?") (valid-answers "Yes" "No"))
 =>
 (retract ?y)
