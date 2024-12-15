@@ -3,8 +3,6 @@
 ;; ****************************************************
 
 
-; show-question-9-1 i show-result-26 to są te kłopotliwe jak coś
-
 
 ;; *************** TEMPLATE DEFINITIONS *************** 
 
@@ -312,7 +310,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Ask a friend, partner, or a family member to make portraits of you.")))
-(assert (end))
 )
 
 (defrule show-result-2
@@ -324,7 +321,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 Josef Koudelka
 Henri Cartier-Bresson
 Richard Avedon")))
-(assert (end))
 )
 
 (defrule show-result-3
@@ -333,7 +329,6 @@ Richard Avedon")))
 =>
 (retract ?y)
 (assert (result (text "Cross-pollinate your interests with music, drawing, writing, or other hobbies.")))
-(assert (end))
 )
 
 (defrule show-result-4
@@ -342,7 +337,6 @@ Richard Avedon")))
 =>
 (retract ?y)
 (assert (result (text "Take a walk around the block. Just look around and do not make any photos.")))
-(assert (end))
 )
 
 (defrule show-result-5
@@ -351,7 +345,6 @@ Richard Avedon")))
 =>
 (retract ?y)
 (assert (result (text "Shoot your own shadow.")))
-(assert (end))
 )
 
 (defrule show-result-6
@@ -360,7 +353,6 @@ Richard Avedon")))
 =>
 (retract ?y)
 (assert (result (text "Make selfies in the mirror.")))
-(assert (end))
 )
 
 (defrule show-result-7
@@ -369,7 +361,6 @@ Richard Avedon")))
 =>
 (retract ?y)
 (assert (result (text "Make a small exhibition of your photos at a local cafe or your house." "Make a video then post it on youtube.")))
-(assert (end))
 )
 
 (defrule show-result-8
@@ -380,7 +371,6 @@ Richard Avedon")))
 (assert (result (text "Work on or make your blog/website." 
 			"Self publish and make a photobook or zine of your images. Give copies to your friends/family. Offer an ebook version online for free." 
 			"Make a video slideshow of your images.")))
-(assert (end))
 )
 
 (defrule show-result-9
@@ -393,7 +383,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Make a list of low risk things that scare you. Do one a day.")))
-(assert (end))
 )
 
 (defrule show-result-10
@@ -402,7 +391,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Shoot what's in your camera bag.")))
-(assert (end))
 )
 
 (defrule show-result-11
@@ -411,7 +399,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Have a photoshoot of your loved ones at home.")))
-(assert (end))
 )
 
 (defrule show-result-12
@@ -420,7 +407,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "If you shoot during the day, shoot at night." "If you shoot in b/w, shoot in color (and vice versa).")))
-(assert (end))
 )
 
 (defrule show-result-13
@@ -429,7 +415,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Choose one: emotions, physical, colors.")))
-(assert (end))
 )
 
 (defrule show-result-14
@@ -438,7 +423,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Post photos that YOU love. If you love them, others will too.")))
-(assert (end))
 )
 
 (defrule show-result-15
@@ -447,7 +431,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Delete your Instagram to avoid jealousy/comparing yourself from other photographers.")))
-(assert (end))
 )
 
 (defrule show-result-16
@@ -456,7 +439,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Stay within 5 blocks of your home to shoot.")))
-(assert (end))
 )
 
 (defrule show-result-17
@@ -465,7 +447,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Go to the closest big city to shoot.")))
-(assert (end))
 )
 
 (defrule show-result-18
@@ -474,7 +455,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Plan an international photography adventure.")))
-(assert (end))
 )
 
 (defrule show-result-19
@@ -483,7 +463,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Travel outside of your home state to shoot.")))
-(assert (end))
 )
 
 (defrule show-result-20
@@ -492,7 +471,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Prefocus your lens to .7m (3 feet) and only shoot at that distance for 1 month.")))
-(assert (end))
 )
 
 (defrule show-result-21
@@ -501,7 +479,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Only shoot macro for the day.")))
-(assert (end))
 )
 
 (defrule show-result-22
@@ -510,7 +487,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Only use your phone to shoot.")))
-(assert (end))
 )
 
 (defrule show-result-23
@@ -519,7 +495,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Shoot squares" "Shoot triangles" "Shoot circles")))
-(assert (end))
 )
 
 (defrule show-result-24
@@ -528,7 +503,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Shoot only facial expressions today.")))
-(assert (end))
 )
 
 (defrule show-result-25
@@ -537,7 +511,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Shoot only body gestures today.")))
-(assert (end))
 )
 
 (defrule show-result-26
@@ -554,7 +527,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Use a flash. You'll see people don't really care.")))
-(assert (end))
 )
 
 (defrule show-result-28
@@ -566,7 +538,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 1. Pretend to record a video. 
 2. Move closer to the subject. 
 3. Take your photo.")))
-(assert (end))
 )
 
 (defrule show-result-29
@@ -578,7 +549,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 1. Choose your scene. 
 2. Wait for the subject to enter your frame. 
 3. Take your photo.")))
-(assert (end))
 )
 
 (defrule show-result-30
@@ -587,7 +557,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Use a disposable camera.")))
-(assert (end))
 )
 
 (defrule show-result-31
@@ -596,7 +565,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Use a Fujifilm Instax.")))
-(assert (end))
 )
 
 (defrule show-result-32
@@ -605,7 +573,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Rule of thirds" "Fibonacci spiral" "Golden rectangle")))
-(assert (end))
 )
 
 (defrule show-result-33
@@ -614,7 +581,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Center eye" "High/low angle" "Dutch angle")))
-(assert (end))
 )
 
 (defrule show-result-34
@@ -625,7 +591,6 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 (assert (result (text "Try to get 10 people to say 'no' to your request of photographing them." 
 			"Conquer your fears, meet new peers. Attend an Eric Kim workshop." 
 			"See how long you can photograph someone until they walk away.")))
-(assert (end))
 )
 
 (defrule show-result-35
@@ -634,5 +599,4 @@ Do I want more confidence in myself or with my photography?") (valid-answers "My
 =>
 (retract ?y)
 (assert (result (text "Good job on making it here! Keep working at it until you are ready to progress.")))
-(assert (end))
 )

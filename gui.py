@@ -14,9 +14,10 @@ def clear_window(wdw, exceptions=[]):
 
 def question_click(answer, question):
     logicClass.assert_answer(answer, question)
+    logicClass.ENV.run()
+    print("-"*100)
     for fact in logicClass.ENV.facts():
         print(fact)
-    logicClass.ENV.run()
     show_question()
 
 
@@ -41,12 +42,14 @@ def show_question():
 
 def restart_click():
     logicClass.restart()
-    show_question()
+    start_click()
 
 
 def start_click():
+    print("-"*100)
+    for fact in logicClass.ENV.facts():
+        print(fact)
     show_question()
-
 
 if __name__ == '__main__':
     root = tk.Tk()
